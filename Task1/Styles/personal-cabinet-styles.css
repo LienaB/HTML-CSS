@@ -1,0 +1,163 @@
+*{
+    box-sizing: border-box;
+}
+
+body, html{
+    margin: 0;
+    height: 100%;
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-width: 760px;
+    min-height: 420px;
+}
+
+.header-container{
+    display: flex;
+    justify-content: center;
+}
+
+.header-img{
+    width: 40px;
+    height: 40px;
+    margin: 8px;
+    justify-content: center;
+}
+
+.login-info{
+    width: 100%;
+    height: 20px;
+    border-bottom: 1px solid #808080;
+    border-top: 1px solid #808080;
+}
+
+.login-info-text{
+    margin: 0;
+    text-align: right;
+}
+
+.logout{
+    margin: 0 5px;
+}
+
+.main-container{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.left-column{
+    height: 100%;
+    width: 22%;
+    border-right: 1px solid #808080;
+    display: inline-block;
+}
+
+.free-space{
+    margin: 5px;
+}
+
+/* .free-space-title{
+
+} */
+
+/* .free-space-elements{
+
+} */
+
+.filled-space{
+    margin: 5px;
+}
+
+/* .filled-space-element{
+
+} */
+
+.content-table{
+    /* background-color: lightskyblue; */
+    height: 100%;
+    width: 56%;
+    /*box-sizing: border-box;*/
+    padding: 10px;
+}
+
+.info-table{
+    width: 100%;
+}
+
+.upload-file-form{
+    border: 1px solid darkgray;
+    padding: 5px;
+}
+
+/* .file-form-title{
+    margin: 3px;
+} */
+
+/* .button-field-wrap{
+    flex-direction: row;
+} */
+
+.upload-file-form-buttons{
+    margin: 2px;
+    width: 60px;
+    /*flex-grow: 1;*/
+}
+
+/* .input-file-field{
+    flex-grow: 8;
+    
+} */
+
+.request-from-remote-server{
+    border: 1px solid darkgray;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+/* .file-form-title{
+
+} */
+
+.request-from-remote-server-field{
+    width: 95%;
+}
+
+.request-from-remote-server-checkbox{
+    margin: 5px 3px;
+}
+
+.statistic{
+    height: 100%;
+    width: 22%;
+    display: inline-block;
+    border-left: 1px solid #808080;
+}
+
+.statistic-title{
+    display: inline-block;
+    margin: 8px 0 0 5px;
+}
+
+.statistic-elements{
+    padding: 0 5px;
+    white-space: nowrap;
+}
+
+.footer{
+    text-align: center;
+    margin: 4px 0;
+}
+
+.qwt{
+    border-top: 1px solid #808080;
+}
+
+h1{
+    margin: 8px;
+    text-align: center;
+}
