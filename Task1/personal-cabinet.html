@@ -3,27 +3,28 @@
     <head>
         <title> Task1 </title>
         <meta charset="utf-8"/>
-        <link href="Styles/personal-cabinet-styles.css" rel="stylesheet"/>
+        <link href="styles/personal-cabinet-styles.css" rel="stylesheet"/>
+        <link href="styles/shared.css" rel="stylesheet"/> 
     </head>
     
     <body>
         <div class="container">
             <header>
                 <div class="header-container"> 
-                    <img class="header-img" src="Images/folder.ico" alt="Ups..."/> 
-                    <h1> File Storage v 0.01 (Lose your files prettily! ;)) </h1>
-                    <img class="header-img" src="Images/folder.ico" alt="Ups..."/>
+                    <img class="header-img" src="images/folder.ico" alt="Ups..."/> 
+                    <h1 class="header-title"> File Storage v 0.01 (Lose your files prettily! ;)) </h1>
+                    <img class="header-img" src="images/folder.ico" alt="Ups..."/>
                 </div>
             </header>
             
             <div class="login-info">
-                    <p class="login-info-text"> You are in the system as <span><b>Ivanov Ivan Ivanovych.</b></span><a href="#" class="logout">Log out.</a></p>
-                </div>
+                <p class="login-info-text"> You are in the system as <span class="username">Ivanov Ivan Ivanovych.</span><a href="#" class="logout">Log out.</a></p>
+            </div>
 
             <div class="main-container">
                 <div class="left-column">
                     <div class="free-space">
-                        <span class="free-space-title"><b>You can upload:</b></span><br/>
+                        <span class="free-space-title">You can upload:</span><br/>
                         <span class="free-space-elements">ZIP (to 20 Mb);</span><br/>
                         <span class="free-space-elements">DOCX (to 40Mb);</span></br>
                         <span class="free-space-elements">PPTX (to 50Mb);</span>
@@ -34,26 +35,30 @@
                     </div>
                 </div>
 
-                <div class="content-table">
+                <div class="content">
                     <table class="info-table">
-                        <tr>
-                            <th>File</th>
-                            <th>Size (kb)</th>
-                            <th>Date and time</th>
-                            <th>Delete</th>
-                        </tr>
-                        <tr>
-                            <th><a href="#">Архів з назвою кирилицею</a></th>
-                            <th>132.22</th>
-                            <th>2014.02.28 18:01:15</th>
-                            <th><a href="#">Delete</a></th>    
-                        </tr>
-                        <tr>
-                            <th><a href="#">_www_app.zip</a></th>
-                            <th>132.45</th>
-                            <th>2014.02.28 18:24:54</th>
-                            <th><a href="#">Delete</a></th>
-                        </tr>    
+                        <thead>
+                            <tr>
+                                <th>File</th>
+                                <th>Size (kb)</th>
+                                <th>Date and time</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#">Архів з назвою кирилицею</a></td>
+                                <td>132.22</td>
+                                <td>2014.02.28 18:01:15</td>
+                                <td><a href="#">Delete</a></td>    
+                            </tr>
+                            <tr>
+                                <td><a href="#">_www_app.zip</a></td>
+                                <td>132.45</td>
+                                <td>2014.02.28 18:24:54</td>
+                                <td><a href="#">Delete</a></td>
+                            </tr>
+                        </tbody>    
                     </table> 
 
                     <form class="upload-file-form" enctype="multipart/form-data" method="post">
@@ -65,16 +70,16 @@
                         <button type="submit" class="upload-file-form-buttons">Upload</button>
                     </form> 
                     <form class="request-from-remote-server" method="post">
-                        <span class="file-form-title"><b>Request from remote server:</b></span><br/>
+                        <span class="file-form-title">Request from remote server:</span><br/>
                         <input type="text" class="request-from-remote-server-field"/><br/>
-                        <span class="file-form-title"><b>Put in the storage:</b></span>
+                        <span class="file-form-title">Put in the storage:</span>
                         <input type="checkbox"class="request-from-remote-server-checkbox"/><br>
                         <button type="submit">Request</button>
                     </form>                 
                 </div>
 
                 <div class="statistic">
-                    <span class="statistic-title"><b>Statistic:</b></span><br/>
+                    <span class="statistic-title">Statistic:</span><br/>
                     <span class="statistic-elements">Users: <span>123</span></span><br/>
                     <span class="statistic-elements">Files: <span>1234</span></span><br/>
                     <span class="statistic-elements">Volume: <span>2345</span> Mb</span><br/>
@@ -82,7 +87,7 @@
                 </div>
             </div>
             
-            <footer class="qwt">
+            <footer class="footer-wrap">
                 <p class="footer"> &copy;2014, EPAM RD PHP Training</p>
             </footer>
         </div>
