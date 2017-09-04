@@ -40,9 +40,19 @@
     text-align: center;
 }
 
+.table-head-row{
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+.table-row{
+    border-bottom: 1px solid lightgray;
+}
+
 .upload-file-form{
-    border: 1px solid darkgray;
+    border: 1px solid lightgray;
     padding: 5px;
+    margin-top: 5px;
 }
 
 .file-form-title{
@@ -52,18 +62,36 @@
 .upload-file-form-buttons{
     margin: 2px;
     width: 60px;
+    border: 1px solid lightgrey;
+    background-color: #f2f2f2;
+    padding: 2px;
+    width: 70px;
+}
+.input-file-field{
+    border: outset none;
+    border: 1px solid lightgrey;
 }
 
 .request-from-remote-server{
-    border: 1px solid darkgray;
+    border: 1px solid lightgray;
     padding: 5px;
     margin-top: 5px;
 }
 
 .request-from-remote-server-field{
     width: 95%;
+    border: outset none;
+    border: 1px solid lightgrey;
 }
 
 .request-from-remote-server-checkbox{
     margin: 5px 3px;
+}
+
+.submit-button{
+    border: 1px solid lightgrey;
+    background-color: #f2f2f2;
+    padding: 2px;
+    width: 70px;
+    margin: 2px;
 }
