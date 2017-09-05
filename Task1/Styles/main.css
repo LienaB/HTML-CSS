@@ -4,7 +4,7 @@
 }
 
 .left-column{
-    background-color: #F4FBFC;
+    background-color: #ff99e6;
     height: 100%;
     width: 22%;
     border-right: 1px solid #808080;
@@ -20,11 +20,11 @@
 }
 
 .content{
-    background-color: #EEFBFC;
+    background-color: #ffccf2;
 }
 
 .statistic{
-    background-color: #F4FBFC;
+    background-color: #ff99e6;
 }
 
 .login-form-lables{
