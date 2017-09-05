@@ -67,9 +67,15 @@
     padding: 2px;
     width: 70px;
 }
+.button-field-wrap{
+    display: flex;
+    align-items: center;
+}
+
 .input-file-field{
-    border: outset none;
     border: 1px solid lightgrey;
+    flex-grow: 1;
+    height: 21px;
 }
 
 .request-from-remote-server{
@@ -79,8 +85,8 @@
 }
 
 .request-from-remote-server-field{
-    width: 95%;
-    border: outset none;
+    width: 100%;
+    height: 21px;
     border: 1px solid lightgrey;
 }
 
@@ -98,4 +104,13 @@
 
 .delete-link{
     color: red;
+}
+
+.sorting-button{
+    background: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }

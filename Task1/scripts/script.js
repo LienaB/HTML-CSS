@@ -110,16 +110,26 @@ var data = [
     window.onload = function(){
         renderTable(data);
         
-        document.getElementsByClassName("size-button-sort")[0].onclick = function() {
-            renderTable(sortBySize(data));
+        document.getElementsByClassName("size-button-sort-asc")[0].onclick = function() {
+            renderTable(sortBySize(data, true));
         };
 
-        document.getElementsByClassName("file-button-sort")[0].onclick = function() {
-            renderTable(sortByName(data));
+        document.getElementsByClassName("size-button-sort-desc")[0].onclick = function() {
+            renderTable(sortBySize(data, false));
+        };
+
+        document.getElementsByClassName("file-button-sort-asc")[0].onclick = function() {
+            renderTable(sortByName(data, true));
+        }
+        document.getElementsByClassName("file-button-sort-desc")[0].onclick = function() {
+            renderTable(sortByName(data, false));
         }
 
-        document.getElementsByClassName("date-button-sort")[0].onclick = function() {
-            renderTable(sortByDate(data));
+        document.getElementsByClassName("date-button-sort-asc")[0].onclick = function() {
+            renderTable(sortByDate(data, true));
+        }
+        document.getElementsByClassName("date-button-sort-desc")[0].onclick = function() {
+            renderTable(sortByDate(data, false));
         }
     };
 
@@ -159,25 +169,25 @@ var data = [
         }
     };
 
-    function sortBySize(dataSet){var flag = false;;
+    function sortBySize(dataSet, asc){
         var sortedData = dataSet.slice();
         for (var i = 0; i < sortedData.length; i++) {
             for (var j = 0; j < sortedData.length - 1; j++){
-                if (sortedData[j].fileSize > sortedData[j+1].fileSize) {
+                if (asc && sortedData[j].fileSize > sortedData[j+1].fileSize || !asc && sortedData[j].fileSize < sortedData[j+1].fileSize) {
                     var swap = sortedData[j+1];
                     sortedData[j+1] = sortedData[j];
-                    sortedData[j] = swap;
+                    sortedData[j] = swap; 
                 } 
             }
         }
         return sortedData;
     };
 
-    function sortByName(dataSet){
+    function sortByName(dataSet, asc){
         var sortedData = dataSet.slice();
         for (var i = 0; i < sortedData.length; i++) {
             for (var j = 0; j < sortedData.length - 1; j++){
-                if (sortedData[j].fileName.toLowerCase() > sortedData[j+1].fileName.toLowerCase()) {
+                if (asc && sortedData[j].fileName.toLowerCase() > sortedData[j+1].fileName.toLowerCase() || !asc && sortedData[j].fileName.toLowerCase() < sortedData[j+1].fileName.toLowerCase()) {
                     var swap = sortedData[j+1];
                     sortedData[j+1] = sortedData[j];
                     sortedData[j] = swap;
@@ -187,13 +197,13 @@ var data = [
         return sortedData;
     };
 
-    function sortByDate(dataSet){
+    function sortByDate(dataSet, asc){
         var sortedData = dataSet.slice();
         for (var i = 0; i < sortedData.length; i++) {
             for (var j = 0; j < sortedData.length - 1; j++){
                 var DateA = new Date(sortedData[j].fileDate);
                 var DateB = new Date(sortedData[j+1].fileDate);
-                if (DateA - DateB > 0) {
+                if (asc && DateA - DateB > 0 || !asc && DateA - DateB < 0) {
                     var swap = sortedData[j+1];
                     sortedData[j+1] = sortedData[j];
                     sortedData[j] = swap;
