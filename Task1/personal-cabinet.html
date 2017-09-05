@@ -39,25 +39,19 @@
                     <table class="info-table">
                         <thead>
                             <tr>
-                                <th class="table-head-row">File</th>
-                                <th class="table-head-row">Size (kb)</th>
-                                <th class="table-head-row">Date and time</th>
+                                <th class="table-head-row">File
+                                    <input type="button" class="file-button-sort" value="^"/>
+                                </th>
+                                <th class="table-head-row">Size (kb)
+                                    <input type="button" class="size-button-sort" value="^"/>
+                                </th>
+                                <th class="table-head-row">Date and time
+                                    <input type="button" class="date-button-sort" value="^"/>
+                                </th>
                                 <th class="table-head-row">Delete</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td class="table-row"><a href="#">Архів з назвою кирилицею</a></td>
-                                <td class="table-row">132.22</td>
-                                <td class="table-row">2014.02.28 18:01:15</td>
-                                <td class="table-row"><a href="#">Delete</a></td>    
-                            </tr>
-                            <tr>
-                                <td class="table-row"><a href="#">_www_app.zip</a></td>
-                                <td class="table-row">132.45</td>
-                                <td class="table-row">2014.02.28 18:24:54</td>
-                                <td class="table-row"><a href="#">Delete</a></td>
-                            </tr>
+                        <tbody class = "table-body">
                         </tbody>    
                     </table> 
 
@@ -91,5 +85,7 @@
                 <p class="footer"> &copy;2014, EPAM RD PHP Training</p>
             </footer>
         </div>
+
+        <script src="scripts/script.js"> </script>
     </body>
 </html>

@@ -95,3 +95,7 @@
     width: 70px;
     margin: 2px;
 }
+
+.delete-link{
+    color: red;
+}
